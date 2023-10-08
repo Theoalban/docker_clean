@@ -7,7 +7,6 @@
 echo -e "\nLet us start by clearing up  all the containers we have on the system ...\n"
 sleep 3
 docker rm -f $(docker ps -a -q) > /dev/null 2>&1
-sleep 3
 if
 	[ $? -ne 0 ]
 
@@ -23,7 +22,6 @@ sleep 3
 echo -e  "\nNow let's clear all the images we have...\n"
 sleep 3
 docker rmi $(docker images -q) -f > /dev/null 2>&1
-sleep 3
 if
         [ $? -ne 0 ]
 then
